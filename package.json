@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "phosphor-react": "^1.4.1",
+    "styled-components": "^5.3.5"
+  }
+}
