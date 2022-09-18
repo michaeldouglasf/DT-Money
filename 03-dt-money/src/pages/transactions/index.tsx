@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { Header } from "../../components/Header";
-import { Summary } from "../../components/Summury";
+import { Summary } from "../../components/Summary";
 import { TransactionsContext } from "../../context/TransactionsContext";
-import { priceFormatter } from "../../utils/formatter";
+import { dateFormatter, priceFormatter } from "../../utils/formatter";
 import { SearchForm } from "./components/SearchForm";
 import {
   TransactionsContainer,
@@ -33,7 +33,7 @@ const {transactions} = useContext(TransactionsContext)
                       </PriceHighLight>
                     </td>
                     <td>{transaction.type}</td>
-                    <td>{transaction.createdAt}</td>
+                    <td>{dateFormatter.format(new Date(transaction.createdAt))}</td>
               </tr>
               )
             })}
